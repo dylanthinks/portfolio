@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const GlobalStyle = createGlobalStyle`
 html {
@@ -38,8 +38,20 @@ samp {
 `
 
 const Layout = ({ pageTitle, children }) => {
+    const data = useStaticQuery(graphql`
+    query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }`
+    )
+
     return (
         <React.Fragment>
+        <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+        <header>{data.site.siteMetadata.title}</header>
         <main>
         <GlobalStyle theme="purple" />
             <title>{pageTitle}</title> 

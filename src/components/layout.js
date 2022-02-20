@@ -37,6 +37,14 @@ samp {
 }
 `
 
+const NavLinks = styled.ul`
+margin: 0;
+`
+
+const NavLinkItem = styled.li`
+margin: 0;
+`
+
 const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(graphql`
     query {
@@ -56,10 +64,11 @@ const Layout = ({ pageTitle, children }) => {
         <GlobalStyle theme="purple" />
             <title>{pageTitle}</title> 
             <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </ul>
+                <NavLinks>
+                    <NavLinkItem><Link to="/">Home</Link></NavLinkItem>
+                    <NavLinkItem><Link to="/about">About</Link></NavLinkItem>
+                    <NavLinkItem><Link to="/blog">Blog</Link></NavLinkItem>
+                </NavLinks>
             </nav>
             <h1>{pageTitle}</h1> 
         {children}

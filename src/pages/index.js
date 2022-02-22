@@ -25,8 +25,8 @@ const IndexPage = () => {
      <Button primary>Click</Button>
      <SpecificButton>vee</SpecificButton>
      <StaticImage 
-     src="https://www.caughtbytheriver.net/wp-content/uploads/2019/11/19649_uferasgerard_gillesdeleuze_bmp-1024x707.jpg"
-     alt="black and white image of a man standing by a mirror that is facing another mirror so they reflect into infinity"
+     src="../images/02.jpeg"
+     alt="dylan smiling at the camera"
      />
    </Layout>
    </Container>

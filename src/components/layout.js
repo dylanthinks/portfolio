@@ -4,6 +4,8 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const GlobalStyle = createGlobalStyle`
 html {
+  background-color: white;
+  color: ${props => (props.theme === "purple" ? "purple" : "white")};
   line-height: 1.15;
   -webkit-text-size-adjust: 100%; 
 }
@@ -37,13 +39,31 @@ samp {
 }
 `
 
+const Container = styled.div`
+margin: auto;
+max-width: 500px;
+font-family: sans-serif;
+`
+
+const Heading = styled.h1`
+color: paleturquoise;
+`
+
 const NavLinks = styled.ul`
-margin: 0;
+display: flex;
+list-style: none;
+padding-left: 0;
 `
 
 const NavLinkItem = styled.li`
-margin: 0;
+padding-right: 2rem;
 `
+
+const StyledLink = styled(Link)`
+color: green;
+text-decoration: none;
+cursor: crosshair;
+`;
 
 const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(graphql`
@@ -58,6 +78,7 @@ const Layout = ({ pageTitle, children }) => {
 
     return (
         <React.Fragment>
+        <Container>
         <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         <header>{data.site.siteMetadata.title}</header>
         <main>
@@ -65,14 +86,15 @@ const Layout = ({ pageTitle, children }) => {
             <title>{pageTitle}</title> 
             <nav>
                 <NavLinks>
-                    <NavLinkItem><Link to="/">Home</Link></NavLinkItem>
-                    <NavLinkItem><Link to="/about">About</Link></NavLinkItem>
-                    <NavLinkItem><Link to="/blog/">Blog</Link></NavLinkItem>
+                    <NavLinkItem><StyledLink to="/">Home</StyledLink></NavLinkItem>
+                    <NavLinkItem><StyledLink to="/about">About</StyledLink></NavLinkItem>
+                    <NavLinkItem><StyledLink to="/blog/">Writing</StyledLink></NavLinkItem>
                 </NavLinks>
             </nav>
-            <h1>{pageTitle}</h1> 
+            <Heading>{pageTitle}</Heading> 
         {children}
         </main>
+        </Container>
          </React.Fragment>
     )
 } 

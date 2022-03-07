@@ -1,21 +1,19 @@
 import * as React from 'react'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import FontStyles from '../fonts/fonts'
-import theme from './theme'
 
 const GlobalStyle = createGlobalStyle`
 html {
   font-size: 10px;
   font-family: 'Source Serif Pro', serif;
   background-color: white;
-  color: ${props => (props.theme === "purple" ? "purple" : "white")};
+  color: ${props => (props.primary === "purple" ? "purple" : "white")};
   line-height: 1.15;
   -webkit-text-size-adjust: 100%; 
 }
 
 body, ul {
-    color: ${props => (props.theme === "purple" ? "purple" : "white")};
+    color: ${props => (props.primary === "purple" ? "purple" : "white")};
     margin: 0;
     width: 100%;
     height: 100%;
@@ -45,6 +43,7 @@ samp {
 
 const Container = styled.div`
 margin: auto;
+color: purple;
 max-width: 80vw;
 `
 
@@ -80,26 +79,22 @@ const Layout = ({ pageTitle, children }) => {
 
     return (
         <React.Fragment>
-        <ThemeProvider>
         <Container>
         <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-        <header>{data.site.siteMetadata.title}</header>
         <main>
-        <GlobalStyle theme="purple" />
+        <GlobalStyle/>
             <title>{pageTitle}</title> 
             <nav>
                 <NavLinks>
                     <NavLinkItem><StyledLink to="/">Home</StyledLink></NavLinkItem>
                     <NavLinkItem><StyledLink to="/about">About</StyledLink></NavLinkItem>
                     <NavLinkItem><StyledLink to="/blog/">Writing</StyledLink></NavLinkItem>
-                    <NavLinkItem><StyledLink to="/design/">Design System</StyledLink></NavLinkItem>
                 </NavLinks>
             </nav>
             <Heading>{pageTitle}</Heading> 
         {children}
         </main>
         </Container>
-        </ThemeProvider>
          </React.Fragment>
     )
 } 

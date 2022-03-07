@@ -1,18 +1,15 @@
 import * as React from 'react'
-import styled from 'styled-components'
-import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
 
-const Container = styled.div`
-`
-
-const Button = styled.button`
-background: ${props => props.primary ? "pink" : "white"};
-color: ${props => props.primary ? "white" : "pink"};
-`
+import Layout from '../components/layout'
 
 const Paragraph = styled.p`
 font-size: 1.6rem;
+`
+
+const Container = styled.div`
+margin: 0;
 `
 
 const IndexPage = () => {

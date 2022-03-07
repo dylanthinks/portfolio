@@ -1,33 +1,13 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "my web dev portfolio",
-  "keywords": [
-    "gatsby"
-  ],
+  "private": true,
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.11.1",
-    "@mdx-js/mdx": "^2.0.0",
-    "@mdx-js/react": "^1.6.22",
-    "babel-plugin-styled-components": "^2.0.2",
-    "gatsby": "^3.10.0",
-    "gatsby-plugin-image": "^0.7.2",
-    "gatsby-plugin-mdx": "^2.14.0",
-    "gatsby-plugin-sharp": "^2.14.4",
-    "gatsby-plugin-styled-components": "^3.10.0",
-    "gatsby-source-contentful": "^4.6.4",
-    "gatsby-transformer-remark": "^5.9.0",
-    "gatsby-transformer-sharp": "^2.12.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "styled-components": "^5.3.3",
-    "styled-normalize": "^8.0.7"
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }

@@ -2,6 +2,7 @@ import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
 import client from '../../client'
+import Layout from '../../components/layout'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -33,6 +34,7 @@ const Post = ({post}) => {
     body = []
   } = post
   return (
+    <Layout>
     <article>
       <h1>{title}</h1>
       <span>By {name}</span>
@@ -57,6 +59,7 @@ const Post = ({post}) => {
       components={ptComponents}
       />
     </article>
+    </Layout>
   )
 }
 

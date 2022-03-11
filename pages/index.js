@@ -1,19 +1,51 @@
 import Link from 'next/link'
-import Date from '../components/date'
+import groq from 'groq'
+import client from '../client'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
+const Index = ({posts}) => {
+  return (
+    <Layout home>
+    <Head>
+      <title>{siteTitle}</title>
+    </Head>
+    <section className={utilStyles.headingMd}>
+        <p>I'm back, baby! Took a long break from web development due to advocacy work, but now I intend to codeeeee again</p>
+      </section>
+    <div>
+      <h1>Writing</h1>
+      {posts.length > 0 && posts.map(
+        ({ _id, title = '', slug = '', publishedAt = ''}) =>
+        slug && (
+          <li key={_id}>
+          <Link href="/posts/[slug]" as={`/posts/${slug.current}`}>
+            <a>{title}</a>
+          </Link>{' '}
+          ({new Date(publishedAt).toDateString()})
+          </li>
+        )
+      )}
+    </div>
+    </Layout>
+  )
 }
 
+export async function getStaticProps() {
+  const posts = await client.fetch(groq`
+  *[_type == "post" && publishedAt < now()] | order(publishedAt desc)
+  `)
+  return {
+    props: {
+      posts
+    }
+  } 
+}
+
+export default Index
+
+/*
 export default function Home ({ allPostsData }) {
   return (
     <Layout home>
@@ -47,3 +79,4 @@ export default function Home ({ allPostsData }) {
     </Layout>
   )
 }
+*/

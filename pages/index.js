@@ -15,7 +15,7 @@ const Index = ({posts}) => {
         <p>I'm back, baby! Took a long break from web development due to advocacy work, but now I intend to codeeeee again</p>
       </section>
     <div>
-      <h1>Writing</h1>
+      <h1>Blog</h1>
       {posts.length > 0 && posts.map(
         ({ _id, title = '', slug = '', publishedAt = ''}) =>
         slug && (

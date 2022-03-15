@@ -1,73 +1,58 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
 
-const name = 'Dylan T. Hinks'
-export const siteTitle = 'Dylan T. Hinks'
+export const siteTitle = "Dylan T. Hinks";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, ...customMeta }) {
+  const router = useRouter();
+
+  const meta = {
+    title: "Dylan T. Hinks | Web Developer, Writer",
+    description: `I've been developing website for 6 years. Get in touch if interested.`,
+    image: "../public/images/profile.jpg",
+    type: "website",
+    ...customMeta,
+  };
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{meta.title}</title>
+        <meta name="robots" content="follow, index" />
+        <meta content={meta.description} name="description" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          property="og:url"
+          content={`https://dylanthinks.com${router.asPath}`}
         />
+        <link
+          rel="canonical"
+          href={`https://dylanthinks.com${router.asPath}`}
+        />
+        <meta property="og:type" content={meta.type} />
+        <meta property="og:site_name" content="Dylan T. Hinks" />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.image} />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
             siteTitle
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
-        <meta name="og:title" content={siteTitle} />
+
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={374}
-              width={250}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={374}
-                  width={250}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
+      <header className={styles.header}></header>
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      <div>
+        <Link href="/">
+          <a>← Back to home</a>
+        </Link>
+      </div>
     </div>
-  )
+  );
 }

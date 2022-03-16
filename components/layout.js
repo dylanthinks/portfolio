@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
+import Hero from "./hero";
+import Nav from "./Navigation";
+import Footer from "./Footer";
 
 export const siteTitle = "Dylan T. Hinks";
 
@@ -37,22 +39,18 @@ export default function Layout({ children, ...customMeta }) {
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@signscloser" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
       </Head>
-      <header className={styles.header}></header>
-      <main>{children}</main>
+      <Nav />
+      <main className="dark:bg-gray-800 w-full">{children}</main>
       <div>
         <Link href="/">
           <a>← Back to home</a>
         </Link>
       </div>
+      <Footer />
     </div>
   );
 }

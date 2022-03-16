@@ -1,15 +1,12 @@
 import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
-import Nav from "../components/navigation";
-import Footer from "../components/footer";
+import { ThemeProvider } from "next-themes";
 
 function App({ Component, pageProps }) {
   return (
-    <>
-      <Nav />
+    <ThemeProvider defaultTheme="light" attribute="class">
       <Component {...pageProps} />
-      <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 

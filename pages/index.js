@@ -3,8 +3,8 @@ import groq from "groq";
 import client from "../client";
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
 import About from "../components/about";
+import Hero from "../components/hero";
 
 const Index = ({ posts }) => {
   return (
@@ -12,11 +12,10 @@ const Index = ({ posts }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <main className="max-w-4xl mx-auto mt-16 antialiased">
-          <About />
-        </main>
-      </section>
+      <main className="max-w-4xl mx-auto mt-16 antialiased">
+        <Hero />
+        <About />
+      </main>
       <div>
         <h1>Blog</h1>
         {posts.length > 0 &&

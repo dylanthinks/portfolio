@@ -1,6 +1,6 @@
 const userData = {
   name: "Dylan T. Hinks",
-  designation: "Web Developer | Writer | Hotline Advocate",
+  designation: "Web Developer",
   avatarUrl: "/profile.jpg",
   email: "dylanthinks@gmail.com",
   projects: [
@@ -47,3 +47,5 @@ const userData = {
     },
   ],
 };
+
+export default userData;

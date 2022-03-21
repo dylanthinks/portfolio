@@ -44,7 +44,7 @@ export default function Layout({ children, ...customMeta }) {
         <meta name="twitter:description" content={meta.description} />
       </Head>
       <Nav />
-      <main className="dark:bg-gray-800 w-full">{children}</main>
+      <main className="w-full">{children}</main>
       <div>
         <Link href="/">
           <a>← Back to home</a>

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
+import userData from "/constants/data";
 
-const Nav = () => {
+export default function Nav() {
   const router = useRouter();
   console.log(router.asPath);
   const { theme, setTheme } = useTheme();
@@ -15,28 +16,31 @@ const Nav = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 md:py-20">
-      <div className="container px-4 mx-auto lg:max-4-wxl flex items-center justify-between">
-        <Link href="/">
-          <a
-            className={
-              "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"
-            }
-          >
-            Dylan T. Hinks
-          </a>
-        </Link>
+      <div className="flex md:flex-row justify-between items-center">
+        <div className="flex flex-col">
+          <Link href="/">
+            <a className="hover:no-underline">
+              <h1 className="font-semibold text-2xl tracking-wider uppercase text-gray-900 dark:text-gray-100 hover:text-sky-500">
+                {userData.name}
+              </h1>
+              <p className="text-base font-light text-gray-500 dark:text-cool-white">
+                {userData.designation}
+              </p>
+            </a>
+          </Link>
+        </div>
 
         <div className="space-x-8 hidden md:block">
-          <Link href="/about">
+          <Link href="/About">
             <a
               className={`text-base  ${
-                router.asPath === "/about"
+                router.asPath === "/About"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
               }`}
             >
               About{" "}
-              {router.asPath === "/about" && (
+              {router.asPath === "/About" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -125,6 +129,4 @@ const Nav = () => {
       </div>
     </div>
   );
-};
-
-export default Nav;
+}

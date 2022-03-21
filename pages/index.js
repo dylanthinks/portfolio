@@ -3,7 +3,7 @@ import groq from "groq";
 import client from "../client";
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import About from "../components/about";
+import About from "./About";
 import Hero from "../components/hero";
 
 const Index = ({ posts }) => {
@@ -14,7 +14,6 @@ const Index = ({ posts }) => {
       </Head>
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <Hero />
-        <About />
       </main>
       <div>
         <h1>Blog</h1>

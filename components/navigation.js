@@ -14,8 +14,14 @@ export default function Nav() {
     setMounted(true);
   }, []);
 
+  const [isActive, setActive] = useState("false");
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 md:py-20">
+    <div className="max-w-8xl mx-auto px-10 py-10 bg-primary-color md:py-10">
       <div className="flex md:flex-row justify-between items-center">
         <div className="flex flex-col">
           <Link href="/">
@@ -23,24 +29,35 @@ export default function Nav() {
               <h1 className="font-semibold text-2xl tracking-wider uppercase text-gray-900 dark:text-gray-100 hover:text-sky-500">
                 {userData.name}
               </h1>
-              <p className="text-base font-light text-gray-500 dark:text-cool-white">
-                {userData.designation}
-              </p>
+              <p className="text-base font-light">{userData.designation}</p>
             </a>
           </Link>
         </div>
 
         <div className="space-x-8 hidden md:block">
-          <Link href="/About">
+          <Link href="/work">
             <a
               className={`text-base  ${
-                router.asPath === "/About"
+                router.asPath === "/work"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
               }`}
             >
-              About{" "}
-              {router.asPath === "/About" && (
+              Work
+              {router.asPath === "/work"}
+            </a>
+          </Link>
+
+          <Link href="/blog">
+            <a
+              className={`text-base  ${
+                router.asPath === "/blog"
+                  ? "text-gray-800 font-bold dark:text-gray-400"
+                  : "text-gray-600 dark:text-gray-300 font-normal "
+              }`}
+            >
+              Blog{" "}
+              {router.asPath === "/blog" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -57,29 +74,7 @@ export default function Nav() {
               )}
             </a>
           </Link>
-          <Link href="/projects">
-            <a
-              className={`text-base  ${
-                router.asPath === "/projects"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
-            >
-              Projects
-              {router.asPath === "/projects"}
-            </a>
-          </Link>
-          <Link href="/experience">
-            <a
-              className={`text-base  ${
-                router.asPath === "/experience"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
-            >
-              Experience {router.asPath === "/experience"}
-            </a>
-          </Link>
+
           <Link href="/contact">
             <a
               className={`text-base  ${
@@ -126,6 +121,23 @@ export default function Nav() {
             </svg>
           )}
         </button>
+      </div>
+      <div className="space-x-8 block md:hidden mt-4">
+        <Link href="/work">
+          <a classname="text-base font-normal text-gray-600 dark:text-gray-300">
+            Work
+          </a>
+        </Link>
+        <Link href="/blog">
+          <a classname="text-base font-normal text-gray-600 dark:text-gray-300">
+            Blog
+          </a>
+        </Link>
+        <Link href="/contact">
+          <a classname="text-base font-normal text-gray-600 dark:text-gray-300">
+            Contact
+          </a>
+        </Link>
       </div>
     </div>
   );

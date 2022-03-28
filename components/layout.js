@@ -6,6 +6,7 @@ import styles from "./layout.module.css";
 import Hero from "./hero";
 import Nav from "./Navigation";
 import Footer from "./Footer";
+import { useTheme } from "next-themes";
 
 export const siteTitle = "Dylan T. Hinks";
 
@@ -14,7 +15,7 @@ export default function Layout({ children, ...customMeta }) {
 
   const meta = {
     title: "Dylan T. Hinks | Web Developer, Writer",
-    description: `I've been developing website for 6 years. Get in touch if interested.`,
+    description: `I'm back to JS development after years in advocacy work. I have been developing for 6 years on and off now. Get in touch if interested.`,
     image: "../public/images/profile.jpg",
     type: "website",
     ...customMeta,
@@ -45,11 +46,6 @@ export default function Layout({ children, ...customMeta }) {
       </Head>
       <Nav />
       <main className="w-full">{children}</main>
-      <div>
-        <Link href="/">
-          <a>← Back to home</a>
-        </Link>
-      </div>
       <Footer />
     </div>
   );

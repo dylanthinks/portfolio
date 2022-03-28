@@ -3,6 +3,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     container: {
       padding: "2rem",
@@ -26,7 +27,9 @@ module.exports = {
       "accent-light-neutral": "#658C7E",
       "accent-dark-neutral": "#111916",
     },
-    extend: {},
+    variants: {
+      extend: {},
+    },
   },
   plugins: [],
 };

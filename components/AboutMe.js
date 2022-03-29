@@ -14,7 +14,7 @@ const About = () => {
             I'm here to help launch and expand your web presence. Let's make the
             world a better place together. 🚀
           </h2>
-          <div className="mt-4 text-gray-800 dark:text-white px-10 lg:px-0">
+          <div className="mt-4 text-gray-800 dark:text-white px-4 md:px-10 lg:px-0">
             <p className="mb-4">
               I've come back to web development after years of anti-violence
               advocacy for ADWAS. Currently developing websites with React,

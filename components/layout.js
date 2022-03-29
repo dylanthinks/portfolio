@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Nav from "./Navigation";
-import Footer from "./Footer";
+import Nav from "./navigation";
+import Footer from "./footer";
 
 export const siteTitle = "Dylan T. Hinks";
 

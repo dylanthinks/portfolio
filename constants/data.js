@@ -3,14 +3,13 @@ const userData = {
   designation: "Web Developer",
   avatarUrl: "/profile.jpg",
   email: "dylanthinks@gmail.com",
-  projects: [
+  work: [
     {
-      title: "The Deaf Hotline website",
-      link: "https://thedeafhotline.org",
-      imgUrl: "",
-    },
-    {
-      title: "",
+      title: "Web Developer",
+      company: "Abused Deaf Women's Advocacy Services",
+      year: "2018",
+      companyLink: "https://thedeafhotline.org",
+      desc: "Developed the Deaf Hotline's website",
     },
   ],
   about: {
@@ -24,13 +23,6 @@ const userData = {
   experience: [
     {
       title: "Web Developer",
-      company: "Abused Deaf Women's Advocacy Services",
-      year: "2018",
-      companyLink: "https://adwas.org",
-      desc: "Developed the Deaf Hotline's website",
-    },
-    {
-      title: "Web Developer",
       company: "CDK Global",
       year: "2016-2017",
       companyLink: "",
@@ -39,11 +31,28 @@ const userData = {
     {
       title: "Web Developer",
       company: "Communication Services for the Deaf",
-      desc: "SignVote",
+      desc: "Developed SignVote, a CSD campaign for raising voter awareness and registration",
+      year: "2016",
+      companyLink:
+        "https://web.archive.org/web/20161019172114/http://signvote.org/",
+      desc: "archived sample of a Wordpress website designed in 2016",
     },
     {
       title: "Web Content Developer",
       company: "Gallaudet University",
+      year: "2016",
+      companyLink: "https://www.gallaudet.edu/",
+      desc: "Established an university-wide intranet while migrating entire database",
+      services: "CMS Development, style guide",
+    },
+    {
+      title: "Web Designer",
+      company: "Colorado Association of the Deaf",
+      year: "2013-2014",
+      companyLink:
+        "https://web.archive.org/web/20140404154823/http://www.cadeaf.org/",
+      desc: "an archived sample of a Wordpress website designed in 2013",
+      services: "Wordpress website, payment processing",
     },
   ],
 };

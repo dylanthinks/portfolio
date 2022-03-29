@@ -1,12 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./layout.module.css";
-import Hero from "./hero";
 import Nav from "./Navigation";
 import Footer from "./Footer";
-import { useTheme } from "next-themes";
 
 export const siteTitle = "Dylan T. Hinks";
 

@@ -14,12 +14,6 @@ export default function Nav() {
     setMounted(true);
   }, []);
 
-  const [isActive, setActive] = useState("false");
-
-  const handleToggle = () => {
-    setActive(!isActive);
-  };
-
   return (
     <div className="max-w-8xl mx-auto px-10 md:px-20 py-10 md:py-10">
       <div className="flex md:flex-row justify-between items-center">

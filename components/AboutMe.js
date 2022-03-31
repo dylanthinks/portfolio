@@ -4,15 +4,15 @@ import profile from "../public/images/profile.jpg";
 
 const About = () => {
   return (
-    <div className="container max-w-4xl px-4 pt-4 mx-auto">
+    <div className="container max-w-4xl px-8 lg:px-4 pt-4 mx-auto">
       <div className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
         <div className="lg:px-4 lg:mt-12 ">
           <h1 className="text-6xl font-bold text-gray-900 lg:text-5xl dark:text-white">
             Hey, I'm Dylan.
           </h1>
-          <h2 className="pt-2 px-4 lg:px-0 text-2xl dark:text-white">
+          <h2 className="pt-2 px-16 lg:px-0 text-2xl dark:text-white">
             I'm here to help launch and expand your web presence. Let's make the
-            world a better place together. 🚀
+            world a better place. 🚀
           </h2>
           <div className="mt-4 text-gray-800 dark:text-white px-4 md:px-10 lg:px-0">
             <p className="mb-4">

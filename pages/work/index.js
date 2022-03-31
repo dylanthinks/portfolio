@@ -13,10 +13,7 @@ export default function Work() {
         <div className="dark:bg-gray-900">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
             {/* Single card */}
-            <a
-              href="https://tailwindmasterkit.com"
-              className="w-full block shadow-2xl"
-            >
+            <a href="/" className="w-full block shadow-2xl">
               <div className="relative overflow-hidden">
                 <img
                   src="../public/images/cad.JPG"

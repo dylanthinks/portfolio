@@ -29,16 +29,29 @@ export default function Nav() {
         </div>
 
         <div className="space-x-8 hidden md:block">
-          <Link href="/coming-soon">
+          <Link href="/about">
             <a
               className={`text-base  ${
-                router.asPath === "/coming-soon"
-                  ? "text-gray-800 font-bold dark:text-gray-400 line-through"
-                  : "text-gray-600 dark:text-gray-300 font-normal line-through"
+                router.asPath === "/about"
+                  ? "text-gray-800 font-bold dark:text-gray-400"
+                  : "text-gray-600 dark:text-gray-300 font-normal"
+              }`}
+            >
+              About
+              {router.asPath === "/about"}
+            </a>
+          </Link>
+
+          <Link href="/work">
+            <a
+              className={`text-base  ${
+                router.asPath === "/work"
+                  ? "text-gray-800 font-bold dark:text-gray-400"
+                  : "text-gray-600 dark:text-gray-300 font-normal"
               }`}
             >
               Work
-              {router.asPath === "/coming-soon" && (
+              {router.asPath === "/work" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -56,16 +69,16 @@ export default function Nav() {
             </a>
           </Link>
 
-          <Link href="/coming-soon">
+          <Link href="/blog">
             <a
               className={`text-base  ${
-                router.asPath === "/coming-soon"
+                router.asPath === "/blog"
                   ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal line-through"
+                  : "text-gray-600 dark:text-gray-300 font-normal"
               }`}
             >
               Blog{" "}
-              {router.asPath === "/coming-soon" && (
+              {router.asPath === "/blog" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -80,19 +93,6 @@ export default function Nav() {
                   />
                 </svg>
               )}
-            </a>
-          </Link>
-
-          <Link href="/coming-soon">
-            <a
-              className={`text-base  ${
-                router.asPath === "/coming-soon"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal line-through"
-              }`}
-            >
-              Contact
-              {router.asPath === "/coming-soon"}
             </a>
           </Link>
         </div>
@@ -130,20 +130,70 @@ export default function Nav() {
           )}
         </button>
       </div>
+
       <div className="space-x-8 block md:hidden mt-4">
+        <Link href="/about">
+          <a
+            className={`text-base  ${
+              router.asPath === "/about"
+                ? "text-gray-800 font-bold dark:text-gray-400 line-through"
+                : "text-gray-600 dark:text-gray-300 font-normal line-through"
+            }`}
+          >
+            About
+            {router.asPath === "/about"}
+          </a>
+        </Link>
         <Link href="/work">
-          <a classname="text-base font-normal text-gray-600 dark:text-gray-300">
+          <a
+            className={`text-base  ${
+              router.asPath === "/work"
+                ? "text-gray-800 font-bold dark:text-gray-400"
+                : "text-gray-600 dark:text-gray-300 font-normal"
+            }`}
+          >
             Work
+            {router.asPath === "/work" && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-down inline-block h-3 w-3"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+                />
+              </svg>
+            )}
           </a>
         </Link>
         <Link href="/blog">
-          <a classname="text-base font-normal text-gray-600 dark:text-gray-300">
-            Blog
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a classname="text-base font-normal text-gray-600 dark:text-gray-300">
-            Contact
+          <a
+            className={`text-base  ${
+              router.asPath === "/blog"
+                ? "text-gray-800 font-bold dark:text-gray-400"
+                : "text-gray-600 dark:text-gray-300 font-normal"
+            }`}
+          >
+            Blog{" "}
+            {router.asPath === "/blog" && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-down inline-block h-3 w-3"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+                />
+              </svg>
+            )}
           </a>
         </Link>
       </div>

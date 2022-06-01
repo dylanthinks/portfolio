@@ -2,7 +2,7 @@ import Link from "next/link";
 import groq from "groq";
 import client from "../client";
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/Layout";
 import AboutMe from "../components/AboutMe";
 
 const Index = ({ posts }) => {
@@ -11,7 +11,7 @@ const Index = ({ posts }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <main className="max-w-8xl mx-auto antialiased">
+      <main className='max-w-8xl mx-auto antialiased'>
         <AboutMe />
       </main>
     </Layout>

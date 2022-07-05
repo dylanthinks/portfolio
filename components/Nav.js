@@ -15,7 +15,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <div className='w-full mx-auto px-10 md:px-20 py-10 md:py-10'>
+    <nav className='w-full mx-auto px-10 md:px-20 py-10 md:py-10'>
       <div className='name flex justify-around items-center'>
         <div className='flex flex-col'>
           <Link href='/'>
@@ -32,9 +32,7 @@ export default function Nav() {
           <Link href='/about'>
             <a
               className={`text-base  ${
-                router.asPath === "/about"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal"
+                router.asPath === "/about" ? "font-bold" : "font-bold"
               }`}
             >
               About
@@ -59,9 +57,7 @@ export default function Nav() {
           <Link href='/work'>
             <a
               className={`text-base  ${
-                router.asPath === "/work"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal"
+                router.asPath === "/work" ? "font-bold " : "font-bold"
               }`}
             >
               Work
@@ -86,9 +82,7 @@ export default function Nav() {
           <Link href='/blog'>
             <a
               className={`text-base  ${
-                router.asPath === "/blog"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal"
+                router.asPath === "/blog" ? "font-bold " : "font-bold"
               }`}
             >
               Blog{" "}
@@ -211,6 +205,6 @@ export default function Nav() {
           </a>
         </Link>
       </div>
-    </div>
+    </nav>
   );
 }

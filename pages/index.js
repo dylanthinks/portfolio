@@ -11,7 +11,7 @@ const Index = ({ posts }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <main className='max-w-8xl mx-auto antialiased'>
+      <main>
         <AboutMe />
       </main>
     </Layout>

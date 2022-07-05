@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import profile from "../public/images/profile.jpg";
+import profile from "../public/profile.jpg";
 
 const About = () => {
   return (
-    <div className='container max-w-4xl px-8 lg:px-4 pt-4 mx-auto'>
+    <div className='container  px-8 lg:px-4 pt-4 mx-auto'>
       <div className='lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left'>
         <div className='lg:px-4 lg:mt-12 '>
           <h1 className='text-5xl px-4 md:px-0 font-bold text-gray-900 lg:text-4xl dark:text-white'>

@@ -6,10 +6,8 @@ import Layout from "../components/Layout";
 const Blog = ({ posts }) => {
   return (
     <Layout>
-      <div className='max-w-4xl mx-auto h-48 bg-white dark:bg-gray-800w mb-32'>
-        <h1 className='text-5xl md:text-8xl font-bold py-10 text-center md:text-left'>
-          Posts
-        </h1>
+      <div className='bg-pink-300'>
+        <h1 className='h1'>Posts</h1>
         {posts.length > 0 &&
           posts.map(
             ({ _id, title = "", slug = "", publishedAt = "" }) =>

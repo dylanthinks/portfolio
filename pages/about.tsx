@@ -1,19 +1,19 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 
 export default function About() {
   return (
     <Layout about>
-      <h1 className='h1'>About</h1>
+      <h1>About</h1>
       <section className='about'>
         <div className='contact'>
           <div>
-            <h2 className='h2'>Contact</h2>
+            <h2>Contact</h2>
             <p>
               <a href='mailto:dylanthinks@gmail.com'>Email me</a>
             </p>
           </div>
           <div>
-            <h2 className='h2'>Worked with</h2>
+            <h2>Worked with</h2>
             <ul>
               <li>Abused Deaf Women's Advocacy Services</li>
               <li>CDK Global</li>

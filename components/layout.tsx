@@ -1,7 +1,9 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Nav from "./Nav";
-import Footer from "./Footer";
+
+import Nav from "./nav";
+import Footer from "./footer";
+import styles from "./layout.module.css";
 
 export const siteTitle = "Dylan T. Hinks";
 
@@ -17,7 +19,7 @@ export default function Layout({ children, ...customMeta }) {
   };
 
   return (
-    <div className='w-full flex flex-col min-h-screen'>
+    <div>
       <Head>
         <title>{meta.title}</title>
         <meta name='robots' content='follow, index' />
@@ -37,9 +39,7 @@ export default function Layout({ children, ...customMeta }) {
         <meta property='og:image' content={meta.image} />
       </Head>
       <Nav />
-      <main className='grow text-lg p-4 md:p-12 md:w-10/12 m-auto'>
-        {children}
-      </main>
+      <main className={styles.container}>{children}</main>
       <Footer />
     </div>
   );

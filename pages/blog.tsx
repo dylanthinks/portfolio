@@ -1,13 +1,14 @@
 import Link from "next/link";
 import groq from "groq";
 import client from "../client";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 
 const Blog = ({ posts }) => {
+
   return (
     <Layout>
-      <div className='bg-pink-300'>
-        <h1 className='h1'>Posts</h1>
+      <div>
+        <h1>Posts</h1>
         {posts.length > 0 &&
           posts.map(
             ({ _id, title = "", slug = "", publishedAt = "" }) =>

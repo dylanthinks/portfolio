@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -14,12 +16,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+h2 {
+  font-weight: bold;
+  line-height: 2;
 }
 
 a,
 nav a:hover {
+  color: var(--color-link);
   text-decoration: underline;
 }
 
@@ -30,5 +40,18 @@ nav a {
 
 img {
   max-width: 100%;
-  display: block;
+  /*  display: block; */
+}
+
+:focus {
+  outline: 0.15rem dashed var(--off-white);
+  outline-offset: 0.25rem;
+}
+
+@media (min-width: 640px) {
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
 }

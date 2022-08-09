@@ -1,10 +1,12 @@
-import "../styles/globals.css";
-import "../styles/styles.css";
 import { ThemeProvider } from "next-themes";
+import { AppProps } from "next/app";
+
+import "../styles/global.css";
+import "../styles/styles.css";
 
 function App({ Component, pageProps }) {
   return (
-    <ThemeProvider defaultTheme='light' attribute='class'>
+    <ThemeProvider defaultTheme='system'>
       <Component {...pageProps} />
     </ThemeProvider>
   );

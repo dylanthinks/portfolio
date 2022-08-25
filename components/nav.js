@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "../constants/data";
-import styles from "../styles/Nav.module.css";
+import styles from "../styles/nav.module.css";
 
 export default function Nav() {
   const router = useRouter();
@@ -17,8 +17,8 @@ export default function Nav() {
 
   return (
     <nav>
-      <div>
-        <div>
+      <div className={styles.container}>
+        <div className={styles.logo}>
           <Link href='/'>
             <a>
               <h1>{userData.name}</h1>
@@ -27,7 +27,7 @@ export default function Nav() {
           </Link>
         </div>
 
-        <div>
+        <div className={styles.navMenu}>
           <Link href='/about'>
             <a
               className={`text-base  ${
@@ -116,7 +116,7 @@ export default function Nav() {
               viewBox='0 0 24 24'
               fill='currentColor'
               stroke='currentColor'
-              className=''
+              className={styles.icon}
             >
               {theme === "dark" ? (
                 <path
@@ -129,7 +129,7 @@ export default function Nav() {
                 <path
                   strokeLinecap='round'
                   strokeLinejoin='round'
-                  strokeWidth={2}
+                  strokeWidth={1}
                   d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
                 />
               )}

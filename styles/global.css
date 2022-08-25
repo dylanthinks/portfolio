@@ -2,6 +2,27 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --cool-white: #f5f5f5;
+  --warm-white: #fbf2ef;
+  --soft-gray: rgba(255, 255, 255, 0.7);
+  --full-gray: #ddd;
+  --rich-black: #171e27;
+  --primary-color: #1a6490;
+  --secondary-color: #e1771e;
+  --secondary-light-neutral: #d0b096;
+  --secondary-dark-neutral: #251e19;
+  --primary-light-neutral: #627885;
+  --primary-dark-neutral: #101517;
+  --primary-rich: #067dc3;
+  --secondary-rich: #ff7400;
+  --accent-color: #149769;
+  --accent-rich: #00c982;
+  --accent-light-neutral: #658c7e;
+  --accent-dark-neutral: #111916;
 }
 
 html,
@@ -11,14 +32,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -43,6 +64,11 @@ img {
   /*  display: block; */
 }
 
+nav {
+  margin: 0 auto;
+  padding: 45px;
+}
+
 :focus {
   outline: 0.15rem dashed var(--off-white);
   outline-offset: 0.25rem;
@@ -53,5 +79,9 @@ img {
 @media (min-width: 768px) {
   h1 {
     font-size: 2em;
+  }
+
+  nav {
+    padding: 45px 90px;
   }
 }

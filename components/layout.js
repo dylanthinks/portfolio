@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import styles from "./layout.module.css";
 
 import Nav from "./nav";
 import Footer from "./footer";
-import styles from "./layout.module.css";
 
 export const siteTitle = "Dylan T. Hinks";
 

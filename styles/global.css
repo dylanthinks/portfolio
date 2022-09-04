@@ -33,7 +33,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
-
+  height: 100%;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -69,19 +69,45 @@ nav {
   padding: 45px;
 }
 
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  padding: 0.25rem;
+}
+
 :focus {
   outline: 0.15rem dashed var(--off-white);
   outline-offset: 0.25rem;
 }
 
 @media (min-width: 640px) {
+
 }
 @media (min-width: 768px) {
   h1 {
-    font-size: 2em;
+
   }
 
   nav {
     padding: 45px 90px;
+  }
+
+  footer {
+    padding: 1.5rem 0;
   }
 }

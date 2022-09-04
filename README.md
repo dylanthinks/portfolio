@@ -1,1 +1,1 @@
-My portfolio website where I will put my web work and some writing.
+My portfolio, written in Next.js.

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "../constants/data";
-import styles from "../styles/nav.module.css";
+import styles from "../styles/components/nav.module.css";
 
 export default function Nav() {
   const router = useRouter();

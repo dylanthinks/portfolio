@@ -23,8 +23,7 @@ const Footer = () => {
               >
                 LinkedIn
               </a>
-<<<<<<< HEAD
-            </p>
+              </li>
           </div>
           <div className="flex flex-wrap pt-2 sm:space-x-4 space-x-2 font-medium lg:pt-0">
             <a
@@ -44,7 +43,6 @@ const Footer = () => {
               GitHub
             </a>
           </div>
-=======
             </li>
             <li>
               <a
@@ -55,8 +53,7 @@ const Footer = () => {
                 GitHub
               </a>
             </li>
-          </ul>
->>>>>>> work
+            </ul>
         </div>
       </div>
     </footer>

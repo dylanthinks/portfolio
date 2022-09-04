@@ -1,0 +1,75 @@
+.container {
+  display: grid;
+  grid-template-areas: "logo . switcher"
+                        "nav nav nav";
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  grid-area: logo;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.logo p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
+.navMenu {
+grid-area: nav;
+display: flex;
+padding-top: 1rem;
+font-size: 1rem;
+font-weight: 400;
+}
+
+.navMenu a:not(:first-child) {
+  margin-left: 2rem;
+}
+
+.button {
+  grid-area: switcher;
+  border-radius: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+  text-transform: none;
+  border: none;
+  margin: 0 auto;
+  padding: 0.75rem;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+  grid-template-areas: "logo nav switcher"
+  }
+
+  .navMenu {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+}

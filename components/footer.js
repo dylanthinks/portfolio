@@ -1,19 +1,29 @@
+import styles from "../styles/components/footer.module.css";
+
 const Footer = () => {
   return (
-    <div className="flex-1 justify-between mt-12 lg:mt-18 sm:py-12 py-6 px-6 items-end">
-      <div className="max-w-full px-4 mx-auto text-gray-800 dark:text-white">
-        <div className="pb-4 mb-2 border-t-2 border-gray-300 dark:border-white-300"></div>
-        <div className="flex flex-col justify-between lg:flex-row items-center">
-          <p>Made with Nextjs and Tailwind CSS</p>
-          <div className="flex pt-2 lg:pt-0">
-            <p>
-              Email me at{" "}
+    <footer>
+      <div className={styles.container}>
+        <p>
+          Made with <a href='https://nextjs.org'>Nextjs</a>
+        </p>
+        <div>
+          <p>
+            Contact{" "}
+            <a href='mailto:dylanthinks@gmail.com'>dylanthinks@gmail.com</a>
+          </p>
+        </div>
+        <div className={styles.links}>
+          <ul>
+            <li>
               <a
-                href="mailto:dylanthinks@gmail.com"
-                className="underline hover:no-underline"
+                href='https://www.linkedin.com/in/dylanhinks/'
+                target='_blank'
+                rel='noreferrer'
               >
-                dylanthinks@gmail.com
+                LinkedIn
               </a>
+<<<<<<< HEAD
             </p>
           </div>
           <div className="flex flex-wrap pt-2 sm:space-x-4 space-x-2 font-medium lg:pt-0">
@@ -34,9 +44,22 @@ const Footer = () => {
               GitHub
             </a>
           </div>
+=======
+            </li>
+            <li>
+              <a
+                href='https://github.com/dylanthinks'
+                target='_blank'
+                rel='noreferrer'
+              >
+                GitHub
+              </a>
+            </li>
+          </ul>
+>>>>>>> work
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

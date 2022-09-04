@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "./node_modules/@sanity/base/types/**/*.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "pages/index.js", "pages/coming-soon.js", "pages/blog.js", "pages/about.js", "pages/404.js", "pages/_app.js", "components/projects.js", "components/Posts.js", "components/nav.js", "components/layout.js", "components/footer.js", "components/contact.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

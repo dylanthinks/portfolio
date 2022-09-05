@@ -3,11 +3,12 @@ import groq from "groq";
 import client from "../client";
 import Layout from "../components/layout";
 
-const Blog = ({ posts }) => {
+import styles from "../styles/components/posts.module.css";
 
+const Blog = ({ posts }) => {
   return (
     <Layout>
-      <div>
+      <div className={styles.container}>
         <h1>Posts</h1>
         {posts.length > 0 &&
           posts.map(

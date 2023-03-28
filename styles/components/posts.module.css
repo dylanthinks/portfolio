@@ -1,6 +1,29 @@
 .container {
-  width: 100%;
+  max-width: var(--content-width);
+  padding: var(--space);
   display: flex;
   flex-direction: column;
-  background-color: blanchedalmond;
+  margin: 0 auto;
+}
+
+.container h1 {
+  margin-bottom: var(--space);
+  text-align: center;
+}
+
+.posts {
+
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+}
+
+.post a {
+font-size: 1.5rem;
+text-decoration: none;
+font-weight: 600;
+margin: 0rem 0 1rem;
 }

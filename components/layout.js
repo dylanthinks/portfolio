@@ -19,7 +19,7 @@ export default function Layout({ children, ...customMeta }) {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>{meta.title}</title>
         <meta name='robots' content='follow, index' />
@@ -41,6 +41,6 @@ export default function Layout({ children, ...customMeta }) {
       <Nav />
       <main className={styles.container}>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }

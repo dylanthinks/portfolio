@@ -16,7 +16,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav>
+    <header>
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href='/'>
@@ -27,7 +27,7 @@ export default function Nav() {
           </Link>
         </div>
 
-        <div className={styles.navMenu}>
+        <nav className={styles.navMenu}>
           <Link href='/about'>
             <a
               className={`text-base  ${
@@ -102,7 +102,7 @@ export default function Nav() {
               )}
             </a>
           </Link>
-        </div>
+        </nav>
 
         <button
           aria-label='Toggle Dark Mode'
@@ -137,6 +137,6 @@ export default function Nav() {
           )}{" "}
         </button>
       </div>
-    </nav>
+    </header>
   );
 }

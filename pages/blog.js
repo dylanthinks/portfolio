@@ -10,17 +10,21 @@ const Blog = ({ posts }) => {
     <Layout>
       <div className={styles.container}>
         <h1>Posts</h1>
-        {posts.length > 0 &&
-          posts.map(
-            ({ _id, title = "", slug = "", publishedAt = "" }) =>
-              slug && (
-                <li key={_id}>
-                  <Link href='/posts/[slug]' as={`/posts/${slug.current}`}>
-                    <a>{title}</a>
-                  </Link>{" "}
-                </li>
-              )
-          )}
+
+        <li className={styles.posts}>
+          {posts.length > 0 &&
+            posts.map(
+              ({ _id, title = "", slug = "", publishedAt = "" }) =>
+                slug && (
+                  <article key={_id} className={styles.post}>
+                    {new Date(publishedAt).toDateString().replace(/^\S+\s/, "")}
+                    <Link href='/posts/[slug]' as={`/posts/${slug.current}`}>
+                      {title}
+                    </Link>{" "}
+                  </article>
+                )
+            )}
+        </li>
       </div>
     </Layout>
   );

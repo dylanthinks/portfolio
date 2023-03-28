@@ -23,6 +23,8 @@
   --accent-rich: #00c982;
   --accent-light-neutral: #658c7e;
   --accent-dark-neutral: #111916;
+  --space: 3.5rem;
+  --content-width: 940px;
 }
 
 html,
@@ -49,13 +51,13 @@ h2 {
 }
 
 a,
-nav a:hover {
+header a:hover {
   color: var(--color-link);
   text-decoration: underline;
 }
 
 a:hover,
-nav a {
+header a {
   text-decoration: none;
 }
 
@@ -64,7 +66,7 @@ img {
   /*  display: block; */
 }
 
-nav {
+header {
   margin: 0 auto;
   padding: 45px;
 }
@@ -101,7 +103,7 @@ li {
 @media (min-width: 768px) {
 
 
-  nav {
+  header {
     padding: 45px 90px;
   }
 

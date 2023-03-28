@@ -16,8 +16,9 @@ const HomeHero = () => {
             various web technologies. Over the past 3 years, I have worked in
             anti-violence advocacy at{" "}
             <a href='https://thedeafhotline.org'>the deaf hotline</a>. I also
-            currently build and maintain Wordpress websites at Flour City Web Co. On the side,
-            I write about deaf identity politics and work on React projects.
+            currently build and maintain Wordpress websites at Flour City Web
+            Co. On the side, I write about deaf identity politics and work on
+            React projects.
           </p>
         </div>
       </div>

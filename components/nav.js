@@ -28,7 +28,7 @@ export default function Nav() {
         </div>
 
         <nav className={styles.navMenu}>
-          <Link href='/about'>
+          {/*     <Link href='/about'>
             <a
               className={`text-base  ${
                 router.asPath === "/about" ? "font-bold" : "font-bold"
@@ -52,7 +52,6 @@ export default function Nav() {
               )}
             </a>
           </Link>
-
           <Link href='/work'>
             <a
               className={`text-base  ${
@@ -77,7 +76,6 @@ export default function Nav() {
               )}
             </a>
           </Link>
-
           <Link href='/blog'>
             <a
               className={`text-base  ${
@@ -101,7 +99,7 @@ export default function Nav() {
                 </svg>
               )}
             </a>
-          </Link>
+          </Link> */}
         </nav>
 
         <button

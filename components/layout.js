@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from "./layout.module.css";
 
 import Nav from "./nav";
-import Footer from "./footer";
+// import Footer from "./footer";
 
 export const siteTitle = "Dylan T. Hinks";
 
@@ -40,7 +40,7 @@ export default function Layout({ children, ...customMeta }) {
       </Head>
       <Nav />
       <main className={styles.container}>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

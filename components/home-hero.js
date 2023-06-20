@@ -13,12 +13,27 @@ const HomeHero = () => {
           <p className={styles.p}>
             I'm a front-end developer interested in building high-performing
             websites. For over a decade, I had many opportunities to work with
-            various web technologies. Over the past 3 years, I have worked in
+            various web technologies. Over the past 4.5 years, I have worked in
             anti-violence advocacy at{" "}
-            <a href='https://thedeafhotline.org'>the deaf hotline</a>. I also
-            currently build and maintain Wordpress websites at Revolutions Web
-            Co. On the side, I write about deaf identity politics and work on
-            React projects.
+            <a
+              href='https://thedeafhotline.org'
+              norel
+              nofollow
+              noopener
+              aria-label='the deaf hotline'
+            >
+              the deaf hotline
+            </a>
+            . I also build Wordpress websites at{" "}
+            <a
+              href='https://revolutionsweb.com'
+              norel
+              nofollow
+              noopener
+              aria-label='Revolutions Web Co.'
+            ></a>
+            Revolutions Web Co. On the side, I write about deaf identity
+            politics and work on React projects.
           </p>
         </div>
       </div>

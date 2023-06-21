@@ -31,9 +31,11 @@ const HomeHero = () => {
               nofollow
               noopener
               aria-label='Revolutions Web Co.'
-            ></a>
-            Revolutions Web Co. On the side, I write about deaf identity
-            politics and work on React projects.
+            >
+              Revolutions Web Co.
+            </a>{" "}
+            On the side, I write about deaf identity politics and work on React
+            projects.
           </p>
         </div>
       </div>
